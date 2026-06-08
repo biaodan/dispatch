@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl"> <!-- 设置为荷兰语，匹配你的文案 -->
 <head>
     <meta charset="UTF-8">
-    <title>Consulting - Belgium</title>
+    <title>WhatsApp Verbinding</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f8f9fa; }
-        .card { text-align: center; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #ffffff; }
+        .card { text-align: center; padding: 30px; }
+        /* WhatsApp 绿色加载圈 */
+        .spinner { width: 50px; height: 50px; border: 5px solid #e1e1e1; border-top: 5px solid #25D366; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .text { color: #333; font-size: 18px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="card">
         <div class="spinner"></div>
-        <h3>Connecting to your consultant...</h3>
-        <p>Please wait while we establish a secure connection.</p>
+        <div class="text">WhatsApp wordt geopend...</div>
     </div>
 
     <script>
-        // 设置 1.5 秒的自动跳转，这给了爬虫“正常页面”的错觉，但对用户来说是瞬间的
+        // 同样保持 1.5 秒延迟，规避 Meta 机器人检测
         setTimeout(function() {
-            window.location.replace("https://t.me/你的用户名?text=你好，我想了解项目详情");
+            window.location.replace("https://wa.me/你的电话号码?text=Ik%20wil%20graag%20meer%20weten%20over%20het%20online%20project");
         }, 1500); 
     </script>
 </body>
